@@ -1,0 +1,363 @@
+
+* {
+   font-size: 15px;
+
+}
+
+#producto {
+    background-color: white;
+    padding: 0%;
+    text-align: center;
+}
+
+#mi_imagen {
+    width:100%;
+    min-width: 200px;
+    max-width: 100px;
+}
+
+#mi_imagen_1 {
+    width:100%;
+    min-width: 200px;
+    max-width: 100px;
+}
+
+#mi_imagen_2 {
+    width:100%;
+    min-width: 200px;
+    max-width: 100px;
+}
+
+#mi_imagen_3 {
+    width:100%;
+    min-width: 200px;
+    max-width: 100px;
+}
+
+
+body {
+    background-color:rgb(192, 201, 208);
+    padding: 0px;
+    margin:0px;
+}
+
+/*-----------------------------------------------------*/
+/* Estilos de la navbar 
+/*-----------------------------------------------------*/
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 0px;
+    width: auto;
+    text-align: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin:2px;
+    padding: 2px;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 5px;
+    align-items: center;
+}
+
+nav ul li a{
+    color:rgb(12, 11, 11);
+    text-decoration: none;
+    padding: 3px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+nav ul li a:hover{
+    background-color: rgb(237, 13, 13);
+    color: rgb(12, 11, 11);
+    align-items: center;
+}
+
+/*-----------------------------------------------------*/
+/* Estilos de header 
+/*-----------------------------------------------------*/
+
+.encabezado {
+    position: fixed;
+    top: 0;
+    width: 98%; 
+    z-index: 100;
+    display: flex;
+    background-color: white;
+    border: 2px solid #777777;
+    align-items: right;
+    padding: 0px 0px 0px 0px;
+}
+
+/*Tamaño de la imagen de encabezado*/
+.encabezado img {
+    width: 280px;
+    height: 400;
+}
+
+#header-text {
+    width: 70%;
+}
+.encabezado div {
+    text-align: auto;
+}
+
+/* Estilos para el elemento de footer dentro del encabezado */
+.encabezado footer {
+    text-align: left; 
+    padding: 30px; 
+    border-top: 0px solid #ccc; 
+}
+
+
+
+/*-----------------------------------------------------*/
+/* Estilos de footer
+/*-----------------------------------------------------*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border: 0px solid #777777;
+    align-items: center;
+    padding: 0px 30px;
+    grid-area: pie;
+}
+
+.footer p {
+    color: #333333;
+    font-weight: 600;
+}
+.footer-icons {
+    display: flex;
+    gap: 50px
+}
+
+.footer-icons a {
+    color: #333333;
+
+}
+
+
+.encabezado {
+    font-family: 'Maven Pro', sans-serif;
+    grid-area: cabecera;
+    transition: background-color 0.3s ease;
+    vertical-align: center;
+    text-align: center;
+}
+.menu {
+    text-align: center;
+    font-family: 'Maven Pro', sans-serif;
+    grid-area: barra;
+    background-color: yellow;
+}
+.izquierda {
+    font-family: 'Maven Pro', sans-serif;
+    grid-area: izquierda;
+    background-color: white;
+    padding: 10px;
+}
+
+.derecha {
+    font-family: 'Maven Pro', sans-serif;
+    grid-area:derecha;
+    font-size: 20px;
+    padding: 10px;
+    background-color: white;
+}
+
+.derecha_2 {
+    font-family: 'Maven Pro', sans-serif;
+    grid-area:derecha;
+    font-size: 20px;
+    padding: 10px;
+    background-color: white;
+}
+
+.centro {
+    font-family: 'Maven Pro', sans-serif;
+    grid-area: foto;
+    background-color: red;
+}
+
+.centro_2 {
+    font-family: 'Maven Pro', sans-serif;
+    grid-area: foto;
+    background-color: red;
+
+}
+
+
+.footer {
+    font-family: 'Maven Pro', sans-serif;
+    grid-area: pie;
+}
+/*-----------------------------------------------------*/
+/* Estilos de la grilla para pantallas grandes
+/*-----------------------------------------------------*/
+h1 {
+    font-family: 'Maven Pro', sans-serif; font-size: 30px;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.contenedor-grid {
+    margin-top: 100px;
+    font-family: 'Maven Pro', sans-serif;
+    display: grid;
+    width: 99.5%;
+    gap: 5px;
+    grid-template-columns: repeat(4fr,1);
+    grid-template: auto auto auto auto auto/ auto auto auto;
+    grid-template-areas: "cabecera cabecera cabecera"
+                         "barra barra barra"
+                         "izquierda foto derecha"
+                         "derecha_2 derecha_2 derecha_2 derecha_2"
+                         "pie pie pie";
+                         
+
+    
+
+}
+
+/*Grid para los destacados*/
+.contenedor2-grid {
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto; 
+    gap: 10px; 
+}
+
+/*-----------------------------------------------------*/
+/* Estilos de la grilla para pantallas de tablet
+/*-----------------------------------------------------*/
+@media (max-width: 1280px) {
+    .contenedor-grid {
+        display: grid;
+        grid-template: auto auto auto auto/ 50% 50%;
+        grid-template-areas: "cabecera cabecera"
+                             "barra barra"
+                             "izquierda derecha"
+                             " foto foto "
+                             "pie pie";
+     
+    }
+
+/*-----------------------------------------------------*/
+/* Header mas nav
+/*-----------------------------------------------------*/
+    h1 {
+        font-family: 'Roboto', sans-serif; font-size: 20px;
+    }
+}
+
+/*-----------------------------------------------------*/
+/* Estilos de la grilla para pantallas de moviles
+/*-----------------------------------------------------*/
+@media (max-width: 720px) {
+    .contenedor-grid {
+        display: grid;
+        grid-template: auto auto auto auto auto auto/ auto ;
+        grid-template-areas: "cabecera"
+                             "barra"
+                             "izquierda"
+                             " foto  "
+                             "derecha"
+                             "pie";
+    
+    }
+    h1 {
+        font-family: 'Roboto', sans-serif; font-size: 30px;
+    }
+    nav {
+        font-family: 'Maven Pro', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: white;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+/* Aca posiciono la imagen*/
+
+.encabezado {
+    background-color: white; 
+    color: rgb(12, 11, 11); 
+    padding: 10px; 
+}
+
+.header-content {
+    display: flex; 
+    align-items: center; 
+}
+
+/*Tamañpde la imagen del header*/
+img {
+    max-width: 200px;
+    max-height: 120px; 
+    margin-right: 100px; /*aca separo al nav*/
+    border-radius: 100px;
+}
+
+h1 {
+    margin: 10px; 
+}
+
+h3 {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 20px;
+    text-align: center; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.destacados{
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 20px;
+}
+
+.imagen-comentario {
+    font-family: 'Maven Pro', sans-serif;
+    background-color: white; 
+    justify-content: space-between;
+    margin: 5px;
+    padding: 10px; 
+    text-align: center; 
+    border-radius: 10px;
+}
+
+.imagen-comentario img {
+    max-width: 100%; 
+    max-height: 100%;
+    border-radius: 20px;
+}
+
+.destacado {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 20px;
+    padding: 1px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+.coment_rojo{
+    font-family: 'Maven Pro', sans-serif;
+    color: red;
+    font-weight: bold;
+}
+
